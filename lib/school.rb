@@ -1,13 +1,16 @@
 class School
-  attr_reader :name, :students
+  attr_reader :name
 
   def initialize(name)
     @name = name
-    @students = []
   end
 
   def add_student(name, grade)
-    students << Student.new(name, self, grade)
+    Student.new(name, self, grade)
+  end
+
+  def students
+    Student.all.select {|student| student.school == self }
   end
 
   def names(students)
