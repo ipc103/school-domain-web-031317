@@ -11,6 +11,12 @@ describe 'School' do
     end
   end
 
+  describe "#name" do
+    it "knows it's own name" do
+      expect(@school.name).to eq("Test School")
+    end
+  end
+
   describe "#add_student" do
     it 'is able to add a student' do
       @school.add_student("AC Slater", 10)
