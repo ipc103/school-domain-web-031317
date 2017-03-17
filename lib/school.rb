@@ -8,8 +8,7 @@ class School
   end
 
   def add_student(student_name, grade)
-    student = Student.new(student_name, grade, self)
-    students << student
+    Student.new(student_name, grade, self)
   end
 
   def students
